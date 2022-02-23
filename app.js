@@ -2,13 +2,13 @@ var keyLeft
 var keyCenter
 var keyRight
 var playing = false;
-var Sound_1 = new Audio("sound/Forest.mp3");
-var Sound_2 = new Audio("sound/Creek.mp3");
-var Sound_3 = new Audio("sound/Fireplace.mp3");
-var Sound_4 = new Audio("sound/River.mp3");
-var Sound_5 = new Audio("sound/Coast.mp3");
-var Sound_6 = new Audio("sound/Boat_Paddling.mp3");
-var natureSounds = [Sound_1, Sound_2, Sound_3,Sound_4, Sound_5, Sound_6];
+var Sound_1 = new Audio("sound/ASMR_3.mp3");
+var Sound_2 = new Audio("sound/ASMR_2.mp3");
+var Sound_3 = new Audio("sound/ASMR_1.mp3");
+var Sound_4 = new Audio("sound/ASMR_4.mp3");
+var Sound_5 = new Audio("sound/ASMR_5.mp3");
+var Sound_6 = new Audio("sound/ASMR_6.mp3");
+var ASMRSounds = [Sound_1, Sound_2, Sound_3,Sound_4, Sound_5, Sound_6];
 var playedSound;
 var loop = new SeamlessLoop();
 
@@ -25,7 +25,7 @@ var loop = new SeamlessLoop();
 
 
 window.onload = function() {
-    document.getElementById("natureSound_1").focus();
+    document.getElementById("ASMRSound_1").focus();
     setUp();
     start();
 };
@@ -47,13 +47,13 @@ function playSound(index) {
 
     var playPauseIcon = document.activeElement.childNodes;
     if (playing) {
-        for (let i = 0; i < natureSounds.length; i++) {
+        for (let i = 0; i < ASMRSounds.length; i++) {
             document.getElementById(i).style.backgroundImage = "url(icons/playIcon.png)";
         }
         playedSound.pause();
         loop.stop();
     } else {
-        playedSound = natureSounds[index];
+        playedSound = ASMRSounds[index];
         playedSound.loop = true;
         // playedSound.play();
         loop.start("sound" + index);
@@ -63,9 +63,9 @@ function playSound(index) {
 
     playing = !playing;
 
-    if (playedSound != natureSounds[index]) {
+    if (playedSound != ASMRSounds[index]) {
 
-        playedSound = natureSounds[index];
+        playedSound = ASMRSounds[index];
         playedSound.loop = true;
         // playedSound.play();
         loop.start("sound" + index);
@@ -150,7 +150,7 @@ function setUp() {
     document.getElementById("3").style.backgroundImage = "url(icons/playIcon.png)";
     document.getElementById("4").style.backgroundImage = "url(icons/playIcon.png)";
     document.getElementById("5").style.backgroundImage = "url(icons/playIcon.png)";
-    document.getElementById("natureSound_1").focus();
+    document.getElementById("ASMRSound_1").focus();
     window.scrollTo(0, 0); 
 
 }
@@ -161,8 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // getKaiAd( config )
     getKaiAd({
         publisher: 'c0cc2f38-fd2f-4012-ad91-b1299e32c729',
-        app: 'Nature_sounds',
-        slot: 'Nature_sounds_Slot',
+        app: 'ASMR_sounds',
+        slot: 'ASMR_sounds_Slot',
         onerror: err => console.error('Custom catch:', err),
         onready: ad => {
             // Ad is ready to be displayed
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ad.on('display', () => document.getElementById("softKeysContainer").style.display = "none")
             ad.on('close', () => {
                 document.getElementById("softKeysContainer").style.display = "block";
-                document.getElementById("natureSound_1").focus();
+                document.getElementById("ASMRSound_1").focus();
             })
         }
     })
@@ -184,8 +184,8 @@ const interval = setInterval(() => {
 
     getKaiAd({
         publisher: 'c0cc2f38-fd2f-4012-ad91-b1299e32c729',
-        app: 'Nature_sounds',
-        slot: 'Nature_sounds_Slot',
+        app: 'ASMR_sounds',
+        slot: 'ASMR_sounds_Slot',
         test: 1,
         onerror: err => console.error('Custom catch:', err),
         onready: ad => {
@@ -195,7 +195,7 @@ const interval = setInterval(() => {
             ad.on('display', () => document.getElementById("softKeysContainer").style.display = "none")
             ad.on('close', () => {
                 document.getElementById("softKeysContainer").style.display = "block";
-                document.getElementById("natureSound_1").focus();
+                document.getElementById("ASMRSound_1").focus();
             })
         }
     })

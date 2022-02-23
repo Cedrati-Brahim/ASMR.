@@ -33,34 +33,34 @@ h4 {
     width: var(--unified-width);
 }
 
-#natureSound_1 {
+#ASMRSound_1 {
     background-image: url("images/Forest.jpg");
     background-position: center;
     opacity: 0.7;
 }
 
-#natureSound_2 {
+#ASMRSound_2 {
     background-image: url("images/Creek.jpg");
     background-position: center;
     opacity: 0.7;
 }
 
-#natureSound_3 {
+#ASMRSound_3 {
     background-image: url("images/Fireplace.jpg");
     background-position: left;
     opacity: 0.7;
 }
-#natureSound_4 {
+#ASMRSound_4 {
     background-image: url("images/River.jpg");
     background-position: left;
     opacity: 0.7;
 }
-#natureSound_5 {
+#ASMRSound_5 {
     background-image: url("images/Beach.jpg");
     background-position: left;
     opacity: 0.7;
 }
-#natureSound_6 {
+#ASMRSound_6 {
     background-image: url("images/Boat.jpg");
     background-position: left;
     opacity: 0.7;
@@ -68,7 +68,7 @@ h4 {
 
 }
 
-.natureSoundButtons {
+.ASMRSoundButtons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +80,7 @@ h4 {
     font-family: var(--unified-font);
 }
 
-.natureSoundDescription {
+.ASMRSoundDescription {
     margin-right: 2rem;
     color: white;
     font-family: var(--unified-font);
