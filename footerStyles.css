@@ -1,0 +1,38 @@
+footer.softkey,
+#softkey-left,
+#softkey-center,
+#softkey-right {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#softkey-left {
+    text-align: left;
+    font-size: 15px;
+    color: #fffdfd;
+    padding-left: 0.5rem;
+}
+
+#softkey-center {
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+#softkey-right {
+    text-align: right;
+    font-size: 15px;
+    color: #ffffff;
+    padding-right: 0.5rem;
+}
+
+#softKeysContainer {
+    height: 1.1rem;
+    width: 100%;
+    background-color: #b95d61;
+    position: fixed;
+    bottom: 0;
+}

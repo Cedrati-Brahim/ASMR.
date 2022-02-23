@@ -1,0 +1,106 @@
+:root {
+    --unified-width: 100%;
+    --unified-font: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#appContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 18.9rem;
+    margin-bottom: 20px;
+}
+
+#appIcon {
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+}
+
+h4 {
+    margin: 0.1rem;
+    margin-bottom: 1rem;
+    font-family: var(--unified-font);
+}
+
+#buttonContainer {
+    width: var(--unified-width);
+}
+
+#natureSound_1 {
+    background-image: url("images/Forest.jpg");
+    background-position: center;
+    opacity: 0.7;
+}
+
+#natureSound_2 {
+    background-image: url("images/Creek.jpg");
+    background-position: center;
+    opacity: 0.7;
+}
+
+#natureSound_3 {
+    background-image: url("images/Fireplace.jpg");
+    background-position: left;
+    opacity: 0.7;
+}
+#natureSound_4 {
+    background-image: url("images/River.jpg");
+    background-position: left;
+    opacity: 0.7;
+}
+#natureSound_5 {
+    background-image: url("images/Beach.jpg");
+    background-position: left;
+    opacity: 0.7;
+}
+#natureSound_6 {
+    background-image: url("images/Boat.jpg");
+    background-position: left;
+    opacity: 0.7;
+    margin-bottom: 20px;
+
+}
+
+.natureSoundButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--unified-width);
+    height: 3.5rem;
+    background-color: gray;
+    margin: 0 0;
+    outline: 0;
+    font-family: var(--unified-font);
+}
+
+.natureSoundDescription {
+    margin-right: 2rem;
+    color: white;
+    font-family: var(--unified-font);
+}
+
+.playButton {
+    background-image: url("icons/playIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2rem;
+    justify-self: flex-start;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+}
+
+#buttonContainer>div:focus {
+    opacity: 1;
+}
+
+footer {
+    font-family: var(--unified-font);
+}

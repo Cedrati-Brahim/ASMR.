@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "name": "ASMR.",
+  "subtitle": "Autonomous sensory meridian response ",
+  "description": "Listen offline to a pack of diverse types of ASMR sounds, for relaxation and that tingling sensation.",
+  "type": "web",
+  "launch_path": "/index.html",
+   "icons": {
+     "56": "/icons/icon56x56.png",
+     "112": "/icons/icon112x112.png"
+     
+  },
+  "permissions": {
+    "mobiledata":{},
+    "wifidata":{}
+  },
+  "developer": {
+    "name": "Narr",
+    "url": "none"
+    
+  },
+  "locales": {
+    "en-US": {
+      "name": "ASMR.",
+      "subtitle": "Autonomous sensory meridian response ",
+      "description":"Listen offline and end to a pack of diverse types of ASMR sounds, for relaxation and that tingling sensation."
+    }
+  },
+
+  "default_locale": "en-US",
+  "fullscreen": "true"
+
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Nature Sounds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <meta name="theme-color" content="rgb(255, 255, 255)">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <script src="SeamlessLoop.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="kaiads.v5.min.js"></script>
+    <link rel="stylesheet" href="footerStyles.css">
+    <link rel="stylesheet" href="indexStyles.css">
+
+
+
+
+</head>
+
+<body>
+
+    <div id="appContainer">
+        <img src="icons/icon56x56.png" alt="icon" id="appIcon">
+        <h4>Nature Sounds</h4>
+        <div id="buttonContainer">
+            <div id="natureSound_1" class="items natureSoundButtons" tabindex="0" onclick="playSound(0)">
+                <div id="0" class="playButton"></div>
+                <p class ="natureSoundDescription">A distant forest</p>
+            </div>
+            <div id="natureSound_2" class="items natureSoundButtons" tabindex="1" onclick="playSound(1)">
+                <div id="1" class="playButton"></div>
+                <p class="natureSoundDescription">A calm creek</p>
+            </div>
+            <div id="natureSound_3" class="items natureSoundButtons" tabindex="2" onclick="playSound(2)">
+                <div id="2" class="playButton"></div>
+                <p class="natureSoundDescription">Firecamp</p>
+            </div>
+            <div id="natureSound_4" class="items natureSoundButtons" tabindex="3" onclick="playSound(3)">
+                <div id="3" class="playButton"></div>
+                <p class="natureSoundDescription">A flowing river</p>
+            </div>
+            <div id="natureSound_5" class="items natureSoundButtons" tabindex="4" onclick="playSound(4)">
+                <div id="4" class="playButton"></div>
+                <p class="natureSoundDescription">A beach</p>
+            </div>
+            <div id="natureSound_6" class="items natureSoundButtons" tabindex="5" onclick="playSound(5)">
+                <div id="5" class="playButton"></div>
+                <p class="natureSoundDescription">On a boat paddling</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<footer class="softkey">
+    <div id="softKeysContainer">
+        <div id="softkey-left"></div>
+        <div id="softkey-center">Play</div>
+        <div id="softkey-right"></div>
+    </div>
+</footer>
+
+</html>
