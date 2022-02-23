@@ -33,12 +33,12 @@ window.onload = function() {
 function start() {
 
 
-    loop.addUri("sound/Forest.mp3", 54000, "sound0");
-    loop.addUri("sound/Creek.mp3", 30000, "sound1");
-    loop.addUri("sound/Fireplace.mp3", 28000, "sound2");
-    loop.addUri("sound/River.mp3", 32000, "sound3");
-    loop.addUri("sound/Coast.mp3", 121000, "sound4");
-    loop.addUri("sound/Boat_Paddling.mp3", 17000, "sound5");
+    loop.addUri("sound/ASMR_3.mp3", 14000, "sound0");
+    loop.addUri("sound/ASMR_2.mp3", 54000, "sound1");
+    loop.addUri("sound/ASMR_1.mp3", 14000, "sound2");
+    loop.addUri("sound/ASMR_4.mp3", 61000, "sound3");
+    loop.addUri("sound/ASMR_5.mp3", 36000, "sound4");
+    loop.addUri("sound/ASMR_6.mp3", 35000, "sound5");
 }
 
 

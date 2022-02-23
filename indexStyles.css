@@ -24,6 +24,8 @@ body {
 }
 
 h4 {
+    padding-top: 2rem;
+    padding-bottom: 1.5em;
     margin: 0.1rem;
     margin-bottom: 1rem;
     font-family: var(--unified-font);
@@ -34,34 +36,34 @@ h4 {
 }
 
 #ASMRSound_1 {
-    background-image: url("images/Forest.jpg");
+    background-image: url("images/IMG_1.jpg");
     background-position: center;
     opacity: 0.7;
 }
 
 #ASMRSound_2 {
-    background-image: url("images/Creek.jpg");
+    background-image: url("images/IMG_2.jpg");
     background-position: center;
     opacity: 0.7;
 }
 
 #ASMRSound_3 {
-    background-image: url("images/Fireplace.jpg");
+    background-image: url("images/IMG_3.jpg");
     background-position: left;
     opacity: 0.7;
 }
 #ASMRSound_4 {
-    background-image: url("images/River.jpg");
+    background-image: url("images/IMG_4.jpg");
     background-position: left;
     opacity: 0.7;
 }
 #ASMRSound_5 {
-    background-image: url("images/Beach.jpg");
+    background-image: url("images/IMG_5.jpg");
     background-position: left;
     opacity: 0.7;
 }
 #ASMRSound_6 {
-    background-image: url("images/Boat.jpg");
+    background-image: url("images/IMG_6.jpg");
     background-position: left;
     opacity: 0.7;
     margin-bottom: 20px;
