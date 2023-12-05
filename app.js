@@ -1,28 +1,14 @@
-var keyLeft
-var keyCenter
-var keyRight
-var playing = false;
-var Sound_1 = new Audio("sound/ASMR_3.mp3");
-var Sound_2 = new Audio("sound/ASMR_2.mp3");
-var Sound_3 = new Audio("sound/ASMR_1.mp3");
-var Sound_4 = new Audio("sound/ASMR_4.mp3");
-var Sound_5 = new Audio("sound/ASMR_5.mp3");
-var Sound_6 = new Audio("sound/ASMR_6.mp3");
-var ASMRSounds = [Sound_1, Sound_2, Sound_3,Sound_4, Sound_5, Sound_6];
-var playedSound;
-var loop = new SeamlessLoop();
-
-
-/**
- * @brief KeyDown Handler
- *
- * @param et
- *
- * @return 
- */
-
-
-
+let playing = false;
+const Sound_1 = new Audio("sound/ASMR_3.mp3");
+const Sound_2 = new Audio("sound/ASMR_2.mp3");
+const Sound_3 = new Audio("sound/ASMR_1.mp3");
+const Sound_4 = new Audio("sound/ASMR_4.mp3");
+const Sound_5 = new Audio("sound/ASMR_5.mp3");
+const Sound_6 = new Audio("sound/ASMR_6.mp3");
+const ASMRSounds = [Sound_1, Sound_2, Sound_3,Sound_4, Sound_5, Sound_6];
+let playedSound;
+let loop = new SeamlessLoop();
+let adIsOn = false;
 
 window.onload = function() {
     document.getElementById("ASMRSound_1").focus();
@@ -31,8 +17,6 @@ window.onload = function() {
 };
 
 function start() {
-
-
     loop.addUri("sound/ASMR_3.mp3", 14000, "sound0");
     loop.addUri("sound/ASMR_2.mp3", 54000, "sound1");
     loop.addUri("sound/ASMR_1.mp3", 14000, "sound2");
@@ -79,9 +63,9 @@ function playSound(index) {
 }
 
 function handleSoftkeyValue() {
-    var playPauseIcon = document.activeElement.childNodes;
-    var playIcon = "url(\"icons/playIcon.png\")";
-    var pauseIcon = "url(\"icons/pauseIcon.png\")";
+    let playPauseIcon = document.activeElement.childNodes;
+    let playIcon = "url(\"icons/playIcon.png\")";
+    let pauseIcon = "url(\"icons/pauseIcon.png\")";
 
 
     if (playPauseIcon[1].style.backgroundImage == playIcon) {
@@ -92,8 +76,6 @@ function handleSoftkeyValue() {
     }
 
 }
-
-
 function nav(move) {
 
     const currentIndex = document.activeElement.tabIndex;
@@ -140,9 +122,6 @@ function handleKeyDown(et) {
 
 }
 
-
-
-
 function setUp() {
     document.getElementById("0").style.backgroundImage = "url(icons/playIcon.png)";
     document.getElementById("1").style.backgroundImage = "url(icons/playIcon.png)";
@@ -160,7 +139,7 @@ document.addEventListener("keydown", handleKeyDown);
 document.addEventListener("DOMContentLoaded", () => {
     // getKaiAd( config )
     getKaiAd({
-        publisher: 'c0cc2f38-fd2f-4012-ad91-b1299e32c729',
+        publisher: '',
         app: 'ASMR_sounds',
         slot: 'ASMR_sounds_Slot',
         onerror: err => console.error('Custom catch:', err),
@@ -169,31 +148,33 @@ document.addEventListener("DOMContentLoaded", () => {
             // calling 'display' will display the ad
             ad.call('display')
             ad.on('display', () => document.getElementById("softKeysContainer").style.display = "none")
+            ad.on('display', () => adIsOn = true)
             ad.on('close', () => {
+                adIsOn = false;
                 document.getElementById("softKeysContainer").style.display = "block";
                 document.getElementById("ASMRSound_1").focus();
             })
         }
     })
-
-
-
 });
 
 const interval = setInterval(() => {
 
     getKaiAd({
-        publisher: 'c0cc2f38-fd2f-4012-ad91-b1299e32c729',
+        publisher: '',
         app: 'ASMR_sounds',
         slot: 'ASMR_sounds_Slot',
-        test: 1,
         onerror: err => console.error('Custom catch:', err),
         onready: ad => {
             // Ad is ready to be displayed
             // calling 'display' will display the ad
-            ad.call('display')
+            if(adIsOn == false){
+                ad.call('display')
+                adIsOn = true;
+            }
             ad.on('display', () => document.getElementById("softKeysContainer").style.display = "none")
             ad.on('close', () => {
+                adIsOn = true;
                 document.getElementById("softKeysContainer").style.display = "block";
                 document.getElementById("ASMRSound_1").focus();
             })
